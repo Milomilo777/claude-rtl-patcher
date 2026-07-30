@@ -55,10 +55,10 @@ irm https://raw.githubusercontent.com/m4tinbeigi-official/claude-rtl-patcher/mai
 این نسخه بدون نصب Node.js، سیستم‌عامل و مسیر Claude را تشخیص می‌دهد، بکاپ می‌سازد و همان فرآیند تعاملی patch را اجرا می‌کند. نصب‌های MSIX/AppX ویندوز همچنان به‌دلیل قفل بودن فایل‌های بسته پشتیبانی نمی‌شوند.
 
 ### انتخاب دستی حالت
-\`\`\`bash
+```bash
 npx claude-rtl-patcher --font-only   # فقط فونت وزیرمتن، بدون تغییر جهت متن
 npx claude-rtl-patcher --full        # اجبار به پچ کامل حتی روی نسخه‌های جدید
-\`\`\`
+```
 
 ---
 

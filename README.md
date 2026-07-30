@@ -22,6 +22,8 @@ This is an open-source, automated tool that injects robust **Right-to-Left (RTL)
 
 It fixes broken text alignment for Persian (Farsi), Arabic, Hebrew, Urdu, Pashto, Sindhi, Kurdish (Sorani), Dhivehi, and Yiddish — so you can chat with Claude seamlessly. The fix works at the Unicode bidi-algorithm level (`unicode-bidi: plaintext`), not by special-casing individual languages, so it isn't limited to the three languages this project started with.
 
+🎉 This project is **[officially published on the global NPM registry](https://www.npmjs.com/package/claude-rtl-patcher)**!
+
 > **Auto-detect mode:** newer Claude Desktop builds already render RTL correctly on their own. When that's detected, the patcher automatically applies **only the Vazirmatn font** and leaves direction/alignment untouched. On older builds without native RTL, it still applies the full RTL + font patch. You can also force a mode manually with `--font-only` or `--full`.
 
 ## 🚀 One-Click Installation (Recommended)
@@ -50,10 +52,10 @@ irm https://raw.githubusercontent.com/m4tinbeigi-official/claude-rtl-patcher/mai
 The standalone build installs the patcher for the current user, detects the operating system and Claude path, creates a backup, and launches the same interactive patch flow. Windows MSIX/AppX installs remain unsupported because their package files are not writable.
 
 ### Forcing a specific mode
-\`\`\`bash
+```bash
 npx claude-rtl-patcher --font-only   # only apply Vazirmatn, skip RTL/direction changes
 npx claude-rtl-patcher --full        # force the full RTL + font patch, even on new versions
-\`\`\`
+```
 
 ---
 

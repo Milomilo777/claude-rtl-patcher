@@ -22,35 +22,79 @@
 
 הכלי מתקן בעיות יישור טקסט עבור פרסית, ערבית, עברית, אורדו, פשטו, סינדהית, כורדית (סוראנית), דיווהית ויידיש — כדי שתוכלו לשוחח עם Claude בצורה חלקה. התיקון פועל ברמת אלגוריתם ה-bidi של יוניקוד (`unicode-bidi: plaintext`), לא בטיפול מיוחד לכל שפה בנפרד, ולכן הוא אינו מוגבל לשלוש השפות שאיתן הפרויקט התחיל.
 
+🎉 הפרויקט הזה **[פורסם רשמית במאגר ה-NPM הגלובלי](https://www.npmjs.com/package/claude-rtl-patcher)**!
+
+> **מצב זיהוי אוטומטי:** גרסאות חדשות יותר של Claude Desktop כבר מציגות RTL נכון מעצמן. כשזה מזוהה, המתקן מחיל **רק את גופן Vazirmatn** ולא נוגע בכיוון/יישור. בגרסאות ישנות יותר (ללא תמיכת RTL מובנית) עדיין מוחל הפאץ' המלא (גופן + RTL). ניתן גם לכפות מצב ידנית עם `--font-only` או `--full`.
+
 ## 🚀 התקנה בלחיצה אחת (מומלץ)
 
 אין צורך להוריד או להתקין שום דבר באופן ידני. פשוט פתחו את מסוף הפקודות שלכם (CMD / PowerShell / Mac Terminal) והדביקו את פקודת הקסם הזו:
 
-\`\`\`bash
+```bash
 npx claude-rtl-patcher
-\`\`\`
+```
 
 *(הסקריפט כולל ממשק שורת פקודה אינטראקטיבי (CLI) שיזהה אוטומטית את מערכת ההפעלה שלכם, ייצור גיבוי, יזריק את ה-CSS, ו-ב-macOS יחתום מחדש על האפליקציה ויוודא שהיא עדיין נפתחת - הכל תוך שניות.)*
 
 בסיום התהליך, סגרו לחלוטין את Claude (באמצעות `Cmd + Q` או `Ctrl + Q`) ופתחו אותו מחדש.
 
+### מתקין עצמאי (ללא צורך ב-Node.js)
+קבצי הרצה עבור כל גרסה נבנים אוטומטית עבור macOS, Windows ו-Linux. לאחר פרסום גרסה, הורידו את הקובץ המתאים או הריצו את פקודת ההתקנה:
+
+```bash
+# macOS / Linux
+curl -fsSL https://raw.githubusercontent.com/m4tinbeigi-official/claude-rtl-patcher/main/install.sh | bash
+
+# Windows PowerShell
+irm https://raw.githubusercontent.com/m4tinbeigi-official/claude-rtl-patcher/main/install.ps1 | iex
+```
+
+הגרסה העצמאית מתקינה את הכלי עבור המשתמש הנוכחי, מזהה את מערכת ההפעלה ואת נתיב Claude, יוצרת גיבוי, ומפעילה את אותו תהליך תיקון אינטראקטיבי. התקנות Windows MSIX/AppX עדיין אינן נתמכות מכיוון שקבצי החבילה שלהן אינם ניתנים לכתיבה.
+
+### כפיית מצב מסוים
+```bash
+npx claude-rtl-patcher --font-only   # רק גופן Vazirmatn, ללא שינוי כיוון/RTL
+npx claude-rtl-patcher --full        # כפיית הפאץ' המלא גם בגרסאות חדשות
+```
+
 ---
 
 ## 🐧 נתיבים מותאמים אישית ו-Linux
 אם התקנתם את Claude בתיקייה מותאמת אישית, או שאתם משתמשים בגרסת Linux לא רשמית, פשוט ספקו לסקריפט את נתיב ההתקנה שלכם (או ישירות לקובץ `app.asar`) כארגומנט:
-\`\`\`bash
+```bash
 npx claude-rtl-patcher /opt/Claude
 # או ישירות לקובץ asar:
 npx claude-rtl-patcher /home/user/.local/share/Claude/resources/app.asar
-\`\`\`
+```
+
+---
+
+## ⚠️ מגבלה ידועה: התקנות Windows MSIX/AppX
+אם Claude Desktop ב-Windows הותקן כחבילת **MSIX/AppX** (הנתיב מכיל `WindowsApps`), הכלי **יסרב לתקן אותה**. המיקום הזה שייך ל-`TrustedInstaller` ואינו ניתן לכתיבה אפילו כמנהל מערכת, וחבילות MSIX נושאות מנגנון אימות שלמות משלהן שיכול לבטל בשקט עריכות ידניות בכל מקרה. כרגע אין פתרון עוקף נתמך — זו מגבלה של אריזת Windows, לא באג שאפשר לתקן. ראו [#6](https://github.com/m4tinbeigi-official/claude-rtl-patcher/issues/6) לפרטים ולדיון.
+
+---
+
+## 🐛 דיווחי בעיות ותיקונים
+
+התיקונים הבאים בוצעו בעקבות דיווחי הקהילה ב-[issues #4–#8](https://github.com/m4tinbeigi-official/claude-rtl-patcher/issues):
+
+| Issue | דווח על ידי | הבעיה | הפתרון |
+|---|---|---|---|
+| [#4](https://github.com/m4tinbeigi-official/claude-rtl-patcher/issues/4) | [amirhyz](https://github.com/amirhyz) | `plist@5` גרם לקריסת ה-import של `require('plist')` (CommonJS) עם `ERR_PACKAGE_PATH_NOT_EXPORTED`. | `plist` הוצמד לגרסת 3.x התואמת ל-CommonJS, ו-lockfile עודכן. |
+| [#5](https://github.com/m4tinbeigi-official/claude-rtl-patcher/issues/5) | [mkhrezaee](https://github.com/mkhrezaee) | אותה תקלת `plist@5` (ESM בלבד) פגעה גם ב-Windows וב-Node.js 22. | נשמרה תלות תואמת ל-CommonJS ונוספה כיסוי בדיקות. |
+| [#6](https://github.com/m4tinbeigi-official/claude-rtl-patcher/issues/6) | [mkhrezaee](https://github.com/mkhrezaee) | התקנות Windows MSIX/AppX תחת `WindowsApps` אינן ניתנות לכתיבה ועלולות להתבטל על ידי בדיקות שלמות. | נוספה זיהוי WindowsApps, הודעת עצירה מהירה וברורה, ותיעוד המגבלה. |
+| [#7](https://github.com/m4tinbeigi-official/claude-rtl-patcher/issues/7) | [mahsakiani](https://github.com/mahsakiani) | תיקון גרסת macOS העדכנית ביותר פסל את נתוני שלמות ה-ASAR ואת חתימת הקוד. | שלמות ה-ASAR ב-`Info.plist` חושבה מחדש, החבילה נחתמה מחדש ad-hoc, אומתה, וה-rollback הפך אטומי. |
+| [#8](https://github.com/m4tinbeigi-official/claude-rtl-patcher/issues/8) | [Ehsan-rvp](https://github.com/Ehsan-rvp) | שגיאת `ERR_PACKAGE_PATH_NOT_EXPORTED` ב-Node.js 22/24 מנעה הפעלה. | נפתר על ידי תיקון התאימות של `plist` ועדכון ה-lockfile שלמעלה. |
+
+שרשורי ה-issues המקוריים עדיין זמינים לפרטי שחזור ודיון.
 
 ---
 
 ## ⏪ איך לבצע שחזור (Restore)
 אם אי פעם תרצו להחזיר את Claude למצבו המקורי, פשוט הריצו:
-\`\`\`bash
+```bash
 npx claude-rtl-patcher --restore
-\`\`\`
+```
 הגיבוי המקורי שלכם ישוחזר באופן מיידי.
 
 ---
