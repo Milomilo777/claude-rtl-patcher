@@ -4,7 +4,7 @@ All notable changes to this project are documented here, newest first. Format lo
 
 ## Unreleased
 
-- Broadened documentation and metadata to explicitly cover all right-to-left scripts (Urdu, Pashto, Sindhi, Kurdish/Sorani, Dhivehi, Yiddish, and others), not just Persian, Arabic, and Hebrew — the underlying fix already works at the Unicode bidi-algorithm level and was never actually limited to three languages.
+- Broadened documentation and metadata to explicitly cover Urdu, Pashto, Sindhi, Kurdish (Sorani), Dhivehi, and Yiddish, not just Persian, Arabic, and Hebrew — the underlying fix already works at the Unicode bidi-algorithm level and was never actually limited to three languages.
 - Added an Urdu translation (`README-UR.md`).
 - Rewrote the fallback-prompt section and `CLAUDE.md` to be upfront about what the tool patches, instead of instructing an AI assistant to misrepresent the target application to route around its own safety behavior.
 - Corrected the "spoof Apple's ASAR Integrity Check" description — that check belongs to Electron, not Apple, and is unrelated to macOS Gatekeeper.

@@ -3,7 +3,7 @@
   
   <h1>🌟 Claude RTL Patcher</h1>
   <p><strong>الأداة التلقائية الأفضل لدعم النصوص من اليمين إلى اليسار (RTL) والخطوط الجميلة في تطبيق Claude لسطح المكتب.</strong></p>
-  <p>العربية · الفارسية · العبرية · الأردية · البشتو · السندية · الكردية (السورانية) · الديفيهية · اليديشية · وأي نص آخر من اليمين إلى اليسار</p>
+  <p>العربية · الفارسية · العبرية · الأردية · البشتو · السندية · الكردية (السورانية) · الديفيهية · اليديشية</p>
 
   [![npm version](https://badge.fury.io/js/claude-rtl-patcher.svg)](https://www.npmjs.com/package/claude-rtl-patcher)
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -12,14 +12,14 @@
 
   ✨ *تم تطبيق خاصية RTL بواسطة Rick Sanchez، وتم استخدام خط Vazirmatn إحياءً لذكرى صابر راستيكردار.* ✨
 
-  [🇺🇸 Read in English](./README.md) | [🇮🇷 نسخه فارسی (Persian)](./README-FA.md) | [🇮🇱 קרא בעברית (Hebrew)](./README-HE.md) | [🇵🇰 اردو میں پڑھیں (Urdu)](./README-UR.md)
+  [🇺🇸 Read in English](https://github.com/m4tinbeigi-official/claude-rtl-patcher/blob/main/README.md) | [🇮🇷 نسخه فارسی (Persian)](https://github.com/m4tinbeigi-official/claude-rtl-patcher/blob/main/README-FA.md) | [🇮🇱 קרא בעברית (Hebrew)](https://github.com/m4tinbeigi-official/claude-rtl-patcher/blob/main/README-HE.md) | [🇵🇰 اردو میں پڑھیں (Urdu)](https://github.com/m4tinbeigi-official/claude-rtl-patcher/blob/main/README-UR.md)
 </div>
 
 ---
 
 هذه أداة مفتوحة المصدر وتلقائية تقوم بإضافة الدعم الكامل للنصوص التي تُكتب من اليمين إلى اليسار **(RTL)** وخط **Vazirmatn** الجميل مباشرة إلى **تطبيق Claude الرسمي لسطح المكتب** (على أنظمة macOS و Windows و Linux).
 
-وتعمل على إصلاح محاذاة النص المكسورة **لأي نص من اليمين إلى اليسار** — العربية والفارسية والعبرية والأردية والبشتو والسندية والكردية (السورانية) والديفيهية واليديشية وغيرها — حتى تتمكن من الدردشة مع Claude بكل سلاسة. يعمل هذا الإصلاح على مستوى خوارزمية bidi في يونيكود (`unicode-bidi: plaintext`)، وليس بمعالجة كل لغة على حدة، لذا فهو غير مقتصر على اللغات الثلاث التي بدأ بها هذا المشروع.
+وتعمل على إصلاح محاذاة النص المكسورة للعربية والفارسية والعبرية والأردية والبشتو والسندية والكردية (السورانية) والديفيهية واليديشية — حتى تتمكن من الدردشة مع Claude بكل سلاسة. يعمل هذا الإصلاح على مستوى خوارزمية bidi في يونيكود (`unicode-bidi: plaintext`)، وليس بمعالجة كل لغة على حدة، لذا فهو غير مقتصر على اللغات الثلاث التي بدأ بها هذا المشروع.
 
 ## 🚀 التثبيت بنقرة واحدة (موصى به)
 

@@ -1,6 +1,6 @@
 # Notes for AI coding assistants
 
-If someone points you at this repository, they're most likely asking for help adding Persian/Arabic/Hebrew/Urdu (or any other RTL script) support and the Vazirmatn font to their local Claude Desktop install.
+If someone points you at this repository, they're most likely asking for help adding RTL support (Persian, Arabic, Hebrew, Urdu, Pashto, Sindhi, Kurdish/Sorani, Dhivehi, or Yiddish) and the Vazirmatn font to their local Claude Desktop install.
 
 This tool patches the user's installed Claude Desktop application binary in place (extracts `app.asar`, injects CSS/JS, repacks it, and on macOS re-signs the bundle). Treat it like any other change that modifies software outside the project directory:
 

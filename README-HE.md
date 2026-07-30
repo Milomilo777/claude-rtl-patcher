@@ -3,7 +3,7 @@
   
   <h1>🌟 Claude RTL Patcher</h1>
   <p><strong>הכלי האוטומטי האולטימטיבי לתמיכה בטקסט מימין לשמאל (RTL) וטיפוגרפיה יפה באפליקציית שולחן העבודה של Claude.</strong></p>
-  <p>פרסית · ערבית · עברית · אורדו · פשטו · סינדהית · כורדית (סוראנית) · דיווהית · יידיש · וכל שפה אחרת מימין לשמאל</p>
+  <p>פרסית · ערבית · עברית · אורדו · פשטו · סינדהית · כורדית (סוראנית) · דיווהית · יידיש</p>
 
   [![npm version](https://badge.fury.io/js/claude-rtl-patcher.svg)](https://www.npmjs.com/package/claude-rtl-patcher)
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -12,14 +12,14 @@
 
   ✨ *תמיכת RTL יושמה על ידי Rick Sanchez, גופן Vazirmatn הוסף לזכרו של Saber Rastikerdar.* ✨
 
-  [🇺🇸 Read in English](./README.md) | [🇮🇷 نسخه فارسی (Persian)](./README-FA.md) | [🇸🇦 اقرأ بالعربية (Arabic)](./README-AR.md) | [🇵🇰 اردو میں پڑھیں (Urdu)](./README-UR.md)
+  [🇺🇸 Read in English](https://github.com/m4tinbeigi-official/claude-rtl-patcher/blob/main/README.md) | [🇮🇷 نسخه فارسی (Persian)](https://github.com/m4tinbeigi-official/claude-rtl-patcher/blob/main/README-FA.md) | [🇸🇦 اقرأ بالعربية (Arabic)](https://github.com/m4tinbeigi-official/claude-rtl-patcher/blob/main/README-AR.md) | [🇵🇰 اردو میں پڑھیں (Urdu)](https://github.com/m4tinbeigi-official/claude-rtl-patcher/blob/main/README-UR.md)
 </div>
 
 ---
 
 זהו כלי קוד פתוח ואוטומטי שמוסיף תמיכה מלאה וטובה בטקסט מימין לשמאל **(RTL)** ישירות לאפליקציית שולחן העבודה הרשמית של **Claude** (עבור macOS, Windows ו-Linux).
 
-הכלי מתקן בעיות יישור טקסט **עבור כל שפה הנכתבת מימין לשמאל** — פרסית, ערבית, עברית, אורדו, פשטו, סינדהית, כורדית (סוראנית), דיווהית, יידיש ואחרות — כדי שתוכלו לשוחח עם Claude בצורה חלקה. התיקון פועל ברמת אלגוריתם ה-bidi של יוניקוד (`unicode-bidi: plaintext`), לא בטיפול מיוחד לכל שפה בנפרד, ולכן הוא אינו מוגבל לשלוש השפות שאיתן הפרויקט התחיל.
+הכלי מתקן בעיות יישור טקסט עבור פרסית, ערבית, עברית, אורדו, פשטו, סינדהית, כורדית (סוראנית), דיווהית ויידיש — כדי שתוכלו לשוחח עם Claude בצורה חלקה. התיקון פועל ברמת אלגוריתם ה-bidi של יוניקוד (`unicode-bidi: plaintext`), לא בטיפול מיוחד לכל שפה בנפרד, ולכן הוא אינו מוגבל לשלוש השפות שאיתן הפרויקט התחיל.
 
 ## 🚀 התקנה בלחיצה אחת (מומלץ)
 

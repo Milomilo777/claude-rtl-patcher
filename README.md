@@ -3,7 +3,7 @@
   
   <h1>🌟 Claude RTL Patcher</h1>
   <p><strong>The ultimate auto-patcher for Right-to-Left (RTL) text and beautiful typography in the Claude Desktop app.</strong></p>
-  <p>Persian · Arabic · Hebrew · Urdu · Pashto · Sindhi · Kurdish (Sorani) · Dhivehi · Yiddish · and any other RTL script</p>
+  <p>Persian · Arabic · Hebrew · Urdu · Pashto · Sindhi · Kurdish (Sorani) · Dhivehi · Yiddish</p>
 
   [![npm version](https://badge.fury.io/js/claude-rtl-patcher.svg)](https://www.npmjs.com/package/claude-rtl-patcher)
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -12,14 +12,14 @@
 
   ✨ *RTL applied by Rick Sanchez and Vazirmatn font used in memory of Saber Rastikerdar.* ✨
 
-  [🇮🇷 نسخه فارسی (Persian)](./README-FA.md) | [🇸🇦 اقرأ بالعربية (Arabic)](./README-AR.md) | [🇮🇱 קרא בעברית (Hebrew)](./README-HE.md) | [🇵🇰 اردو میں پڑھیں (Urdu)](./README-UR.md)
+  [🇮🇷 نسخه فارسی (Persian)](https://github.com/m4tinbeigi-official/claude-rtl-patcher/blob/main/README-FA.md) | [🇸🇦 اقرأ بالعربية (Arabic)](https://github.com/m4tinbeigi-official/claude-rtl-patcher/blob/main/README-AR.md) | [🇮🇱 קרא בעברית (Hebrew)](https://github.com/m4tinbeigi-official/claude-rtl-patcher/blob/main/README-HE.md) | [🇵🇰 اردو میں پڑھیں (Urdu)](https://github.com/m4tinbeigi-official/claude-rtl-patcher/blob/main/README-UR.md)
 </div>
 
 ---
 
 This is an open-source, automated tool that injects robust **Right-to-Left (RTL)** support and the beautiful **Vazirmatn** font directly into the official **Claude Desktop App** (macOS, Windows, Linux).
 
-It fixes broken text alignment for **any right-to-left script** — Persian (Farsi), Arabic, Hebrew, Urdu, Pashto, Sindhi, Kurdish (Sorani), Dhivehi, Yiddish, and others — so you can chat with Claude seamlessly. The fix works at the Unicode bidi-algorithm level (`unicode-bidi: plaintext`), not by special-casing individual languages, so it isn't limited to the three languages this project started with.
+It fixes broken text alignment for Persian (Farsi), Arabic, Hebrew, Urdu, Pashto, Sindhi, Kurdish (Sorani), Dhivehi, and Yiddish — so you can chat with Claude seamlessly. The fix works at the Unicode bidi-algorithm level (`unicode-bidi: plaintext`), not by special-casing individual languages, so it isn't limited to the three languages this project started with.
 
 > **Auto-detect mode:** newer Claude Desktop builds already render RTL correctly on their own. When that's detected, the patcher automatically applies **only the Vazirmatn font** and leaves direction/alignment untouched. On older builds without native RTL, it still applies the full RTL + font patch. You can also force a mode manually with `--font-only` or `--full`.
 
