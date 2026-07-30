@@ -2,13 +2,18 @@
 
 All notable changes to this project are documented here, newest first. Format loosely follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
-## Unreleased
+## v1.1.3 (unreleased)
+
+`package.json` was bumped to 1.1.3 to catch up with the tag history below (npm has only ever published 1.0.0, even though v1.1.0–v1.1.2 were tagged for standalone-binary releases) - not yet published to npm.
 
 - Broadened documentation and metadata to explicitly cover Urdu, Pashto, Sindhi, Kurdish (Sorani), Dhivehi, and Yiddish, not just Persian, Arabic, and Hebrew — the underlying fix already works at the Unicode bidi-algorithm level and was never actually limited to three languages.
 - Added an Urdu translation (`README-UR.md`).
 - Rewrote the fallback-prompt section and `CLAUDE.md` to be upfront about what the tool patches, instead of instructing an AI assistant to misrepresent the target application to route around its own safety behavior.
 - Corrected the "spoof Apple's ASAR Integrity Check" description — that check belongs to Electron, not Apple, and is unrelated to macOS Gatekeeper.
 - Added `CONTRIBUTING.md`, `SECURITY.md`, issue/PR templates, and this changelog.
+- Added a `files` allowlist to `package.json` so the npm tarball only ships what the CLI needs at runtime (365KB → 33.7KB). Fixed `homepage` to point at the project site instead of the GitHub readme anchor.
+- Added Open Graph/Twitter/JSON-LD metadata, a canonical link, a favicon, and `robots.txt` to the docs site; swapped which language is baked into the visible DOM by default (English) so the page is actually indexable for English-language search.
+- Wired `npm publish --provenance` into the publish workflow for supply-chain attestation, and added an npm downloads badge.
 
 ## v1.1.2
 
