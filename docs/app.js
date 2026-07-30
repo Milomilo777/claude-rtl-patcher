@@ -7,7 +7,7 @@
     root.dir = language === 'fa' ? 'rtl' : 'ltr';
     document.querySelectorAll('[data-fa][data-en]').forEach((node) => { node.textContent = node.dataset[language]; });
     toggle.textContent = language === 'fa' ? 'English' : 'فارسی';
-    document.title = language === 'fa' ? 'Claude RTL Patcher | پشتیبانی فارسی در Claude Desktop' : 'Claude RTL Patcher | RTL support for Claude Desktop';
+    document.title = language === 'fa' ? 'Claude RTL Patcher | پشتیبانی از زبان‌های راست‌به‌چپ در Claude Desktop' : 'Claude RTL Patcher | RTL support for Claude Desktop';
   };
   toggle.addEventListener('click', () => { language = language === 'fa' ? 'en' : 'fa'; updateLanguage(); });
   document.querySelectorAll('.tab').forEach((tab) => tab.addEventListener('click', () => {

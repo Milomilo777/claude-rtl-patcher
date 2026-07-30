@@ -1,7 +1,7 @@
 {
   "name": "claude-rtl-patcher",
   "version": "1.0.0",
-  "description": "Automated patcher to add Vazirmatn font and RTL support to Claude Desktop app for macOS, Windows, and Linux.",
+  "description": "Automated patcher that adds Right-to-Left (RTL) support and the Vazirmatn font to the Claude Desktop app (macOS, Windows, Linux) for Persian, Arabic, Hebrew, Urdu, Pashto, Sindhi, Kurdish (Sorani), Dhivehi, Yiddish, and other RTL scripts.",
   "main": "index.js",
   "bin": "./index.js",
   "scripts": {
@@ -15,10 +15,18 @@
   "keywords": [
     "claude",
     "rtl",
+    "bidi",
+    "i18n",
     "farsi",
     "persian",
     "arabic",
     "hebrew",
+    "urdu",
+    "pashto",
+    "sindhi",
+    "kurdish",
+    "dhivehi",
+    "yiddish",
     "vazirmatn",
     "font",
     "patcher",
