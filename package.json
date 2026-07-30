@@ -38,8 +38,16 @@
   "bugs": {
     "url": "https://github.com/m4tinbeigi-official/claude-rtl-patcher/issues"
   },
-  "homepage": "https://github.com/m4tinbeigi-official/claude-rtl-patcher#readme",
+  "homepage": "https://m4tinbeigi-official.github.io/claude-rtl-patcher/",
   "type": "commonjs",
+  "files": [
+    "index.js",
+    "font.js",
+    "lib",
+    "install.sh",
+    "install.ps1",
+    "install.cmd"
+  ],
   "pkg": {
     "scripts": ["index.js", "lib/**/*.js"],
     "assets": ["font.js", "node_modules/@fontsource/vazirmatn/**/*"]

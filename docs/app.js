@@ -1,7 +1,7 @@
 (() => {
   const root = document.documentElement;
   const toggle = document.getElementById('langToggle');
-  let language = 'fa';
+  let language = 'en';
   const updateLanguage = () => {
     root.lang = language;
     root.dir = language === 'fa' ? 'rtl' : 'ltr';
